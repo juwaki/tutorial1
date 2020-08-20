@@ -1,0 +1,40 @@
+<h1>Tutorial 1</h1>
+
+<!-- <input type="text" placeholder="First Name" [(ngModel)]="firstname">
+
+  <input type="text" placeholder="Last Name" class="lastname" [(ngModel)]="lastname">
+
+  <input type="password" placeholder="enter password" class="lastname" [(ngModel)]="password">
+
+
+  <button type="button" class="btn btn-primary submit" (click)="submit(firstname, lastname)">Submit</button> -->
+
+<form [formGroup]="zoomForm" class="cotainer">
+
+    <input type="text" placeholder="first Name" formControlName="input1">
+
+    <input type="text" placeholder="Last Name" class="lastname" formControlName="input2">
+    <input type="text" placeholder="Email" class="lastname" formControlName="input3">
+    <input type="text" placeholder="ID" class="lastname" formControlName="IDcontrol">
+    <p *ngIf="!checkID" style="color: red;">ID incorrect</p>
+
+    <div *ngIf="showInfo">
+        <p>male: {{info.isMale }}</p>
+        <p>female: {{info.isFemale }}</p>
+        <p>isSouthAfricanCitizen: {{ info.isSouthAfricanCitizen}}</p>
+        <p>Valid ID: {{info.isValid}}</p>
+
+    </div>
+
+
+
+
+    <button type="button" class="btn btn-primary submit" [disabled]="!zoomForm.valid" (click)="submit()">Submit</button>
+
+
+
+
+</form>
+
+
+<!-- {{firstname}} {{lastname}} -->

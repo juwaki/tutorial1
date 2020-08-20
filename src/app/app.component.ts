@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  firstname: string;
-  lastname: string;
-  title = 'tutorial1';
 
 
-  submit(a, b ){
-    console.log(a, b)
-  }
 }

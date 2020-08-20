@@ -1,0 +1,17 @@
+<div class="loader" *ngIf="loader"></div>
+
+<div class="container" id="parentdiv" *ngIf="!loader">
+    <p>first Name : {{name}} </p>
+    <p>last Name : {{surname}} </p>
+    <p>Time: 19:42</p>
+    <p>Grposs: 19 000</p>
+    <p>Net: </p>
+
+</div>
+
+
+
+<button class="btn btn-success" (click)="download()"> Download PDF</button>
+
+
+{{taskName}}
